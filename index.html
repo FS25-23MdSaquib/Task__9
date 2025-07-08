@@ -1,70 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Four Section Layout</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Sections</title>
   <style>
     body {
-      background-color: white;
-      margin: 0;
-      padding: 20px;
+      font-family: Arial, serif;
+      background-color: #fff;
+      margin: 20px;
     }
-
+    h2 {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
     .container {
       display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 25px 40px;
+      max-width: 480px;
     }
-
-    .section {
-      background-color: whitesmoke;
-      border: 1px solid #ccc;
-      padding: 20px;
-      width: 200px;
+    .box {
+      background: #f2f2f2;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.14);
+      width: 130px;
+      height: 85px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+      user-select: none;
+      border: 1px solid transparent;
+      transition: box-shadow 0.3s ease;
+    }
+    .box:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.24);
+    }
+    .icon {
+      width: 32px;
+      height: 32px;
+      fill: #000;
+      margin-bottom: 8px;
+    }
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin-bottom: 8px;
+      filter: brightness(0) invert(0.1);
+    }
+    .label {
+      font-weight: bold;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-
-    .section img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
-    }
-
-    .section h2 {
-      font-size: 20px;
-      margin: 0;
     }
   </style>
 </head>
 <body>
-
-<h1>Website Sections</h1>
-
-<div class="container">
-  <div class="section">
-    <img src="download.png" alt="Home Icon">
-    <h2>Home</h2>
+  <h2>Website Sections</h2>
+  <div class="container">
+    <div class="box" title="Home">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path d="M32 12L12 32h6v20h12V40h8v12h12V32h6z"/>
+      </svg>
+      <div class="label">Home</div>
+    </div>
+    <div class="box" title="About">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="18" r="8" stroke="none"/>
+        <path d="M22 38h20v6H22z" />
+      </svg>
+      <div class="label">About</div>
+    </div>
+    <div class="box" title="Gallery">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect x="14" y="18" width="14" height="10" rx="2" ry="2" />
+        <rect x="36" y="18" width="14" height="10" rx="2" ry="2" />
+        <rect x="14" y="32" width="14" height="10" rx="2" ry="2" />
+        <rect x="36" y="32" width="14" height="10" rx="2" ry="2" />
+      </svg>
+      <div class="label">Gallery</div>
+    </div>
+    <div class="box" title="Contact">
+      <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path d="M20 46l6-6m0 0a9 9 0 0 1 12-12l6 6-18 18-6-6zm18-12 10-10" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="label">Contact</div>
+    </div>
   </div>
-
-  <div class="section">
-    <img src="download (1).png" alt="About Icon">
-    <h2>About</h2>
-  </div>
-
-  <div class="section">
-    <img src="icons8-gallery-50.png" alt="Gallery Icon">
-    <h2>Gallery</h2>
-  </div>
-
-  <div class="section">
-    <img src="phone-icon-trendy-flat-style-260nw-750981196.webp" alt="Contact Icon">
-    <h2>Contact</h2>
-  </div>
-</div>
-
 </body>
 </html>
+
